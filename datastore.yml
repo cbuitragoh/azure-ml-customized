@@ -1,0 +1,8 @@
+$schema: https://azuremlschemas.azureedge.net/latest/azureBlob.schema.json
+name: blob_spotify
+type: azure_blob
+description: Datastore for training spotifiy script.
+account_name: <your_account_name>
+container_name: <container_name>
+credentials:
+  account_key: <account_key_for_account_name>

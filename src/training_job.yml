@@ -1,0 +1,19 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+code: ./model
+command: >-
+  python train.py
+  --training_data ${{inputs.training_data}}
+  --n_estimators ${{inputs.n_estimators}} 
+  --learning_rate ${{inputs.learning_rate}}
+  --random_state ${{inputs.random_state}}
+inputs:
+  training_data: 
+    type: uri_folder
+    path: <azureml://folder_PATH>
+  n_estimators: 100
+  learning_rate: 0.01
+  random_state: 42
+environment: azureml:sklearn-clf-env:1
+compute: azureml:spotify-clsf-cluster
+experiment_name: SpotifyClassification
+description: songs classification to evaluate the probability of their presence in spotify playlists

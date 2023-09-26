@@ -1,0 +1,6 @@
+$schema: https://azuremlschemas.azureedge.net/latest/data.schema.json
+type: uri_folder
+name: spotify-dev-folder
+version: 1
+description: the training folder spotify data
+path: './experimentation/data'

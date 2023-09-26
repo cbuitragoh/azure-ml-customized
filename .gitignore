@@ -1,0 +1,11 @@
+# csv files
+*.csv
+
+# png files
+*.png
+
+# folders
+__pycache__/**
+mlruns/**
+__pycache__
+.pytest_cache/**
